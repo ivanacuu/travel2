@@ -3,16 +3,60 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: border-box;
   .header{
     display: flex;
     justify-content: space-between;
     background-color: $white;
     padding: 20px;
+    position: relative;
     @include desktop{
       width: 1180px;
       margin: 0 auto;
     }
+    .search{
+      display: none;
+      position: relative;
+      width: 80%;
+    }
+    .search.active{
+      display: block;
+    }
+    .nav-menu{
+      font-weight: bold;
+      display: none;
+      font-size: 14px;
+      @include desktop{
+        display: flex;
+      }
+      >ul{
+        @include desktop{
+          display: flex;
+        }
+        li{
+          list-style: none;
+          margin-right: 27px;
+          a{
+            text-decoration: none;
+            color: $black;
+          }
+        }
+      }
+    }
+    .nav-menu.active{
+      display: block;
+      position: absolute;
+    }
+    @include desktop{
+      display: flex;
+    }
+    .search{
+      display: none;
+    }
     .header-icon{
+      &:active{
+        display: none;
+      }
       .company-logo{
         height: 100%;
         align-self: center;
@@ -21,29 +65,20 @@
           margin-right: 25px;
           height: 28px;
           width: 112px;
+
         }
-      }
-      .menu{
-        font-weight: bold;
-        display: none;
-        font-size: 14px;
-        @include desktop{
-          display: flex;
-        }
-        >ul{
-          display: flex;
-          li{
-            list-style: none;
-            margin-right: 27px;
-          }
-        }
-      }
-      @include desktop{
-        display: flex;
       }
     }
-
+    .header-icon.active{
+      display: none;
+    }
     .burger{
+      &:active{
+        background-image: url("../images/Close.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
       @include desktop{
         display: none;
       }
@@ -265,8 +300,6 @@
     }
   }
 }
-
-
 
 
 

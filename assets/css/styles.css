@@ -18,16 +18,50 @@
   background-image: url("../images/Hero.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  box-sizing: border-box; }
   .hero-bgd .header {
     display: flex;
     justify-content: space-between;
     background-color: #F7F7F7;
-    padding: 20px; }
+    padding: 20px;
+    position: relative; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header {
         width: 1180px;
         margin: 0 auto; } }
+    .hero-bgd .header .search {
+      display: none;
+      position: relative;
+      width: 80%; }
+    .hero-bgd .header .search.active {
+      display: block; }
+    .hero-bgd .header .nav-menu {
+      font-weight: bold;
+      display: none;
+      font-size: 14px; }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .nav-menu {
+          display: flex; } }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .nav-menu > ul {
+          display: flex; } }
+      .hero-bgd .header .nav-menu > ul li {
+        list-style: none;
+        margin-right: 27px; }
+        .hero-bgd .header .nav-menu > ul li a {
+          text-decoration: none;
+          color: #2E2D2C; }
+    .hero-bgd .header .nav-menu.active {
+      display: block;
+      position: absolute; }
+    @media screen and (min-width: 1180px) {
+      .hero-bgd .header {
+        display: flex; } }
+    .hero-bgd .header .search {
+      display: none; }
+    .hero-bgd .header .header-icon:active {
+      display: none; }
     .hero-bgd .header .header-icon .company-logo {
       height: 100%;
       align-self: center;
@@ -37,21 +71,13 @@
           margin-right: 25px;
           height: 28px;
           width: 112px; } }
-    .hero-bgd .header .header-icon .menu {
-      font-weight: bold;
-      display: none;
-      font-size: 14px; }
-      @media screen and (min-width: 1180px) {
-        .hero-bgd .header .header-icon .menu {
-          display: flex; } }
-      .hero-bgd .header .header-icon .menu > ul {
-        display: flex; }
-        .hero-bgd .header .header-icon .menu > ul li {
-          list-style: none;
-          margin-right: 27px; }
-    @media screen and (min-width: 1180px) {
-      .hero-bgd .header .header-icon {
-        display: flex; } }
+    .hero-bgd .header .header-icon.active {
+      display: none; }
+    .hero-bgd .header .burger:active {
+      background-image: url("../images/Close.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header .burger {
         display: none; } }
