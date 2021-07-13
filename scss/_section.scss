@@ -1,0 +1,87 @@
+section{
+  padding: 0 20px;
+  @include tablet{
+
+  }
+  @include desktop{
+    width: 1180px;
+    margin: 0 auto;
+  }
+  h2{
+    margin-bottom: 25px;
+    margin-top: 40px;
+    font-size: 23px;
+    font-weight: 500;
+    @include desktop{
+      margin-bottom: 46px;
+      font-size: 28px;
+    }
+  }
+  .heading-text{
+    font-size: 14px;
+    margin-bottom: 53px;
+      @include tablet{
+      margin-bottom: 32px;
+    }
+    @include desktop{
+      margin-bottom: 36px;
+      font-size: 16px;
+    }
+  }
+  .heading-list{
+    margin-bottom: 60px;
+    margin-left: 20px;
+    font-size: 14px;
+    @include tablet{
+      margin-bottom: 48px;
+    }
+    @include desktop{
+      margin-bottom: 58px;
+      font-size: 16px;
+    }
+    li{
+      margin-bottom: 25px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      @include tablet{
+        padding-left: 15px;
+      }
+    }
+    li::marker {
+      font-size: 20px;
+    }
+  }
+  h3{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 27px;
+    @include tablet{
+      margin-bottom: 35px;
+    }
+    @include desktop{
+      margin-bottom: 46px;
+      font-size: 23px;
+    }
+  }
+  .subheading-list{
+    margin-bottom: 35px;
+    font-size: 14px;
+    @include desktop{
+      font-size: 16px;
+    }
+    >a{
+      text-decoration: none;
+      color: $blue;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  >p{
+    font-size: 14px;
+    @include desktop{
+      font-size: 16px;
+    }
+  }
+}

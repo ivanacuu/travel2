@@ -1,0 +1,147 @@
+.form{
+  background-color: $white;
+  margin-top: 75px;
+  @include desktop{
+    padding: 0 20px;
+    margin-top: 125px;
+  }
+  .gray-bgd{
+    padding: 55px 20px;
+    @include tablet{
+      padding: 63px 130px 112px 130px;
+    }
+    @include desktop{
+      max-width: 1180px;
+      padding: 70px 0 100px 0;
+      margin: 0 auto;
+    }
+
+    .form-vector{
+      @include desktop{
+        display: flex;
+        justify-content: space-between;
+      }
+      img{
+        width: 100%;
+        display: none;
+        height: 430px;
+        @include desktop{
+          display: block;
+          margin-right: 65px;
+          margin-top: 45px;
+        }
+      }
+    }
+    p{
+      font-size: 23px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+      @include tablet{
+        margin-bottom:57px;
+        font-size: 28px;
+      }
+      @include desktop{
+        margin-bottom: 78px;
+        font-size: 32px;
+      }
+    }
+    .form-body{
+      label{
+        margin-bottom: 12px;
+        font-size: 12px;
+        font-weight: bold;
+        @include tablet{
+          font-size: 14px;
+        }
+      }
+      input{
+        font-size: 14px;
+        font-weight: 500;
+        height: 43px;
+        border-radius: 5px;
+        border: 1px solid $dark-gray;
+        background-color: $white;
+        padding-left: 14px;
+        @include tablet{
+          height: 55px;
+          font-size: 16px;
+        }
+      }
+      &__name{
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        @include desktop{
+          margin-bottom: 5px;
+        }
+      }
+      &__mail{
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        @include desktop{
+          margin-bottom: 5px;
+        }
+      }
+      &__mgs{
+        display: inline-flex;
+        flex-direction: column;
+        @include desktop{
+          margin-bottom: 5px;
+        }
+        textarea{
+          width: 100%;
+          box-sizing: border-box;
+          background-color: $white;
+          border-radius: 5px;
+          border: 1px solid $dark-gray;
+          outline: none;
+          font-family: 'Montserrat', sans-serif;
+          padding: 22px 0 0 14px;
+          height: 100px;
+          @include desktop{
+            height: 142px;
+          }
+        }
+      }
+      &__checkbox{
+        display: flex;
+        margin-bottom: 40px;
+        @include desktop{
+          margin-bottom: 30px;
+        }
+        input{
+          width: 20px;
+          height: 20px;
+          border: 1px solid $gray;
+          border-radius: 5px;
+        }
+        label{
+          font-size: 14px;
+          font-weight: 400;
+          margin-bottom: unset;
+          align-self: center;
+          margin-left: 15px;
+          @include desktop{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  button{
+    font-size: 14px;
+    font-weight: 500;
+    display: inline;
+    background-color: $dark-gray;
+    color: $white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 15px 35px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

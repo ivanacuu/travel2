@@ -1,0 +1,29 @@
+{
+  "name": "boilerplate",
+  "version": "2.1.1",
+  "description": "Drupal theme files to quickly kickstart a new theme development.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "setup": "npm install",
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "watch": "gulp watch",
+    "prod": "gulp"
+  },
+  "author": {
+    "name": "Ivana"
+  },
+  "license": "MIT",
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-load-subtasks": "^1.2.2",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-util": "^3.0.8"
+  }
+}

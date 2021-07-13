@@ -1,0 +1,48 @@
+/*colors*/
+$white: #F7F7F7;
+$orange: #F7B74F;
+$light-blue: #87C5EC;
+$blue: #4A79BC;
+$black: #2E2D2C;
+$dark-gray: #3C3C3B;
+$gray: #575756;
+
+@font-face {
+  font-family: travelFont;
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: travelFont;
+  src: url(../fonts/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: travelFont;
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+$mobile: 360px;
+$tablet: 768px;
+$desktop: 1180px;
+
+@mixin mobile {
+  @media screen and (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin tablet {
+  @media screen and (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}

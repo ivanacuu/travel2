@@ -1,0 +1,114 @@
+.footer-top{
+  display: none;
+  background-color: $blue;
+  @include desktop{
+    display: block;
+  }
+  .footer-box{
+    display: flex;
+    justify-content: space-between;
+    width: 1180px;
+    margin: 0 auto;
+    padding: 85px 0 65px 0;
+    .footer-info{
+      margin-right: 168px;
+      font-size: 14px;
+      font-weight: 500;
+      img{
+        margin-bottom: 40px;
+      }
+      p{
+        padding-bottom: 25px;
+        color: $white;
+        &:last-child{
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .footer-menu{
+    nav{
+      display: flex;
+      .middle{
+        margin: 0 73px 0 73px;
+      }
+      ul{
+        .footer-heading{
+          margin-bottom: 47px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+          li{
+            margin-bottom: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            list-style: none;
+            color: $white;
+            &:hover{
+              text-decoration: underline;
+            }
+        }
+      }
+    }
+  }
+}
+.footer-legal{
+  background-color: $light-blue;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0 10px 0;
+    @include tablet{
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 20px 15px 20px;
+    }
+    @include desktop{
+      width: 1180px;
+      margin: 0 auto;
+    }
+  }
+  &__text{
+    font-size: 12px;
+    order: 1;
+    color: $white;
+    @include tablet{
+      order: inherit;
+      font-weight: 500;
+    }
+  }
+  &__logo{
+    margin-bottom: 33px;
+    img{
+      height: 26px;
+      width: 29px;
+      &:nth-child(2){
+        margin-right: 30px;
+        margin-left: 30px;
+      }
+    }
+    @include tablet{
+      margin-bottom: 0;
+      img{
+        height: 20px;
+        width: 20px;
+        &:nth-child(2){
+          margin-right: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+    @include desktop{
+      img{
+        height: 23px;
+        width: 23px;
+        &:nth-child(2){
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

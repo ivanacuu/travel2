@@ -1,0 +1,273 @@
+.hero-bgd{
+  background-image: url("../images/Hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .header{
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    padding: 20px;
+    @include desktop{
+      width: 1180px;
+      margin: 0 auto;
+    }
+    .header-icon{
+      .company-logo{
+        height: 100%;
+        align-self: center;
+        filter: grayscale(100%);
+        @include desktop{
+          margin-right: 25px;
+          height: 28px;
+          width: 112px;
+        }
+      }
+      .menu{
+        font-weight: bold;
+        display: none;
+        font-size: 14px;
+        @include desktop{
+          display: flex;
+        }
+        >ul{
+          display: flex;
+          li{
+            list-style: none;
+            margin-right: 27px;
+          }
+        }
+      }
+      @include desktop{
+        display: flex;
+      }
+    }
+
+    .burger{
+      @include desktop{
+        display: none;
+      }
+    }
+    .magnifier{
+      margin-right: 17px;
+      @include desktop{
+        display: none;
+      }
+    }
+
+    .header-action-links{
+      align-items: center;
+      display: none;
+      ul{
+        font-size: 14px;
+        font-weight: bold;
+        .sign{
+          margin-left: 14px;
+        }
+        li{
+          list-style: none;
+          margin-left: 28px;
+        }
+      }
+      select{
+        margin-left: 28px;
+        border: none;
+        background:none;
+        outline: none;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      @include desktop{
+        display: flex;
+      }
+    }
+  }
+  .hero-content{
+    padding: 0 20px;
+    @include desktop{
+      width: 1180px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    h1{
+      font-weight: bold;
+      font-size: 45px;
+      margin: 79px 0 44px 0;
+      color: $white;
+
+      @include tablet{
+        font-size: 55px;
+        margin: 105px 0 50px 0;
+        max-width: 320px;
+      }
+      @include desktop{
+        font-size: 80px;
+        max-width: 470px;
+      }
+    }
+
+    &-text{
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 50px;
+      color: $white;
+      @include tablet{
+        max-width: 430px;
+        font-size: 16px;
+        margin-bottom: 76px;
+      }
+    }
+    &-buttons{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 118px;
+      @include tablet{
+        max-width: 335px;
+        margin-bottom: 105px;
+      }
+      @include desktop{
+        margin-bottom: 0;
+      }
+      a{
+        font-size: 14px;
+        font-weight: 500;
+        padding: 17px 30px;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include tablet{
+          width: unset;
+          padding: 17px 35px;
+        }
+      }
+      &__white{
+        background-color: $white;
+        margin-right: 20px;
+        text-align: center;
+        &:hover{
+          background-color: #DCDCDC;
+          transition: 0.2s;
+        }
+      }
+      &__transparent {
+        background-color: transparent;
+        border: 1px solid $white;
+        position: relative;
+        color: $white;
+        text-align: end;
+        &:hover{
+          background-color: $white;
+          color: $black;
+          transition: 0.2s;
+        }
+        &::after{
+          content:'';
+          position: absolute;
+          box-sizing: border-box;
+          width: 12px;
+          height: 12px;
+          border-style: solid;
+          border-width: 5px 0 5px 10px;
+          border-color: transparent transparent transparent $white;
+          left: 18px;
+        }
+          &:hover::after {
+            border-color: transparent transparent transparent $black;
+          }
+      }
+    }
+    &-guide{
+      text-align: right;
+      padding-bottom: 40px;
+      position: relative;
+      @include tablet{
+        display: flex;
+        justify-content: flex-end;
+        text-align: unset;
+        padding-bottom: 70px;
+      }
+      @include desktop{
+        margin-top: -20px;
+        padding-bottom: 145px;
+      }
+      span{
+        position: absolute;
+        right: 160px;
+        top: 9px;
+        @include tablet{
+          right: 270px;
+          top: -25px;
+        }
+        @include desktop{
+          position: absolute;
+          right: 275px;
+        }
+        >img{
+          width: 55px;
+          height: 55px;
+          @include tablet{
+            width: 85px;
+            height: 75px;
+          }
+        }
+      }
+      h4{
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        @include tablet{
+          margin-bottom: 20px;
+        }
+      }
+      &__quote{
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+      &__person{
+        display: flex;
+        justify-content: flex-end;
+        @include tablet{
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+          margin-left: 33px;
+        }
+        @include desktop{
+          margin-top: - 45px;
+        }
+        .author{
+          margin-right: 10px;
+          @include tablet{
+            transform: rotate(-180deg);
+            margin: 15px 0 0 0;
+
+          }
+          .name{
+            font-size: 12px;
+            font-weight: bold;
+            @include tablet{
+              font-size: 14px;
+            }
+          }
+          .country{
+            font-size: 12px;
+          }
+        }
+        >img{
+          border-radius: 50%;
+          @include tablet{
+            order: -1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+.destinations {
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Caption text */
+  /* Number text (1/3 etc) */
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+  /* On smaller screens, decrease text size */ }
+  .destinations * {
+    box-sizing: border-box; }
+  .destinations body {
+    font-family: Verdana, sans-serif;
+    margin: 0; }
+  .destinations .mySlides {
+    display: none;
+    max-width: 100px;
+    height: 300px;
+    margin: 0px 25px; }
+  .destinations img {
+    vertical-align: middle;
+    height: 300px; }
+  .destinations .slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+    display: flex; }
+  .destinations .prev, .destinations .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  .destinations .next {
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+  .destinations .prev:hover, .destinations .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+  .destinations .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%; }
+  .destinations .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0; }
+  .destinations .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease; }
+  .destinations .active, .destinations .dot:hover {
+    background-color: #717171; }
+  .destinations .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+  @media only screen and (max-width: 300px) {
+    .destinations .prev, .destinations .next, .destinations .text {
+      font-size: 11px; } }
