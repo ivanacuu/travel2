@@ -22,23 +22,9 @@ function showSlides(n) {
   slides[slideIndex - 1].classList.remove("second");
 }
 
-/*menu*/
-const burger = document.querySelector(".burger");
-const menu = document.querySelector(".nav-menu");
+const toggler = document.querySelector(".search-toggler");
+const header = document.querySelector(".header");
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  menu.classList.toggle("active");
-  
-})
-
-/*search bar*/
-const magnify = document.querySelector(".magnifier");
-const block = document.querySelector(".search");
-const logo = document.querySelector(".header-icon")
-
-magnify.addEventListener("click", () => {
-  magnify.classList.toggle("active");
-  block.classList.toggle("active");
-  logo.classList.toggle("active");
+toggler.addEventListener("click", () => {
+  header.classList.toggle("search-open");
 })

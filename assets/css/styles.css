@@ -25,21 +25,94 @@
     justify-content: space-between;
     background-color: #F7F7F7;
     padding: 20px;
-    position: relative; }
+    position: relative;
+    height: 70px;
+    align-items: center; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header {
         width: 1180px;
         margin: 0 auto; } }
+    .hero-bgd .header .right-wrapper {
+      width: 80%;
+      position: relative; }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .right-wrapper {
+          width: unset; } }
+    .hero-bgd .header .right-block {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative; }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .right-block {
+          width: unset; } }
     .hero-bgd .header .search {
-      display: none;
+      display: none; }
+    .hero-bgd .header .search {
+      width: 100%;
+      height: 40px;
       position: relative;
-      width: 80%; }
+      margin-right: 5px; }
+      .hero-bgd .header .search .icon {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 13px; }
+    .hero-bgd .header .form-control {
+      width: 100%;
+      height: 100%;
+      padding-left: 25px; }
+    .hero-bgd .header .search-toggler {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0;
+      position: relative;
+      margin-right: 10px; }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .search-toggler {
+          display: none; } }
+      .hero-bgd .header .search-toggler .close {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .hero-bgd .header.search-open .search-toggler .open {
+      opacity: 0; }
+    .hero-bgd .header.search-open .search-toggler .close {
+      opacity: 1; }
+    .hero-bgd .header.search-open .search {
+      display: block; }
+    @media screen and (min-width: 360px) {
+      .hero-bgd .header.search-open .logo {
+        display: none; }
+      .hero-bgd .header.search-open .search {
+        flex-grow: 1; }
+      .hero-bgd .header.search-open .search-toggler {
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        transform: translateY(-50%); } }
     .hero-bgd .header .search.active {
       display: block; }
+    .hero-bgd .header .menu {
+      display: none; }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .menu {
+          display: flex; } }
     .hero-bgd .header .nav-menu {
       font-weight: bold;
       display: none;
       font-size: 14px; }
+      .hero-bgd .header .nav-menu li {
+        list-style: none;
+        margin-right: 17px; }
+        .hero-bgd .header .nav-menu li a {
+          text-decoration: none;
+          color: #2E2D2C; }
       @media screen and (min-width: 1180px) {
         .hero-bgd .header .nav-menu {
           display: flex; } }
@@ -48,7 +121,7 @@
           display: flex; } }
       .hero-bgd .header .nav-menu > ul li {
         list-style: none;
-        margin-right: 27px; }
+        margin-left: 27px; }
         .hero-bgd .header .nav-menu > ul li a {
           text-decoration: none;
           color: #2E2D2C; }
@@ -63,7 +136,6 @@
     .hero-bgd .header .header-icon:active {
       display: none; }
     .hero-bgd .header .header-icon .company-logo {
-      height: 100%;
       align-self: center;
       filter: grayscale(100%); }
       @media screen and (min-width: 1180px) {
@@ -71,13 +143,6 @@
           margin-right: 25px;
           height: 28px;
           width: 112px; } }
-    .hero-bgd .header .header-icon.active {
-      display: none; }
-    .hero-bgd .header .burger:active {
-      background-image: url("../images/Close.png");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header .burger {
         display: none; } }
@@ -86,6 +151,8 @@
       @media screen and (min-width: 1180px) {
         .hero-bgd .header .magnifier {
           display: none; } }
+    .hero-bgd .header .magnifier.active {
+      display: none; }
     .hero-bgd .header .header-action-links {
       align-items: center;
       display: none; }

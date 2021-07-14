@@ -10,22 +10,122 @@
     background-color: $white;
     padding: 20px;
     position: relative;
+    height: 70px;
+    align-items: center;
     @include desktop{
       width: 1180px;
       margin: 0 auto;
     }
-    .search{
-      display: none;
-      position: relative;
+    .right-wrapper{
       width: 80%;
+      position: relative;
+      @include desktop{
+        width: unset;
+      }
+    }
+    .right-block {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      @include desktop{
+        width: unset;
+      }
+    }
+    
+    .search {
+      display: none;
+    }
+    .search {
+      // max-width: 320px;
+      width: 100%;
+      height: 40px;
+      position: relative;
+      margin-right: 5px;
+      
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 13px;
+      }
+    }
+    .form-control {
+      width: 100%;
+      height: 100%;
+      padding-left: 25px;
+    }
+    .search-toggler {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0;
+      position: relative;
+      margin-right: 10px;
+      @include desktop{
+        display: none;
+      }
+      .close {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &.search-open {
+      .search-toggler {
+        .open {
+          opacity: 0;
+        }
+  
+        .close {
+          opacity: 1;
+        }
+      }
+      .search {
+        display: block;
+      }
+      
+      @include mobile {
+        .logo {
+          display: none;
+        }
+        
+        .search {
+          flex-grow: 1;
+        }
+        .search-toggler{
+          position: absolute;
+          right: 20px;
+          top: 50px;
+          transform: translateY(-50%);
+        }
+      }
     }
     .search.active{
       display: block;
+    }
+    .menu{
+      display: none;
+      @include desktop{
+        display: flex;
+      }
     }
     .nav-menu{
       font-weight: bold;
       display: none;
       font-size: 14px;
+      li{
+        list-style: none;
+        margin-right: 17px;;
+        a{
+          text-decoration: none;
+            color: $black;
+        }
+      }
       @include desktop{
         display: flex;
       }
@@ -35,7 +135,7 @@
         }
         li{
           list-style: none;
-          margin-right: 27px;
+          margin-left: 27px;
           a{
             text-decoration: none;
             color: $black;
@@ -58,7 +158,7 @@
         display: none;
       }
       .company-logo{
-        height: 100%;
+        // height: 100%;
         align-self: center;
         filter: grayscale(100%);
         @include desktop{
@@ -69,16 +169,7 @@
         }
       }
     }
-    .header-icon.active{
-      display: none;
-    }
     .burger{
-      &:active{
-        background-image: url("../images/Close.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
       @include desktop{
         display: none;
       }
@@ -89,7 +180,9 @@
         display: none;
       }
     }
-
+    .magnifier.active{
+      display: none;
+    }
     .header-action-links{
       align-items: center;
       display: none;
