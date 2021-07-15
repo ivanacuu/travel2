@@ -21,10 +21,19 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   slides[slideIndex - 1].classList.remove("second");
 }
-
+/*search block*/
 const toggler = document.querySelector(".search-toggler");
 const header = document.querySelector(".header");
 
 toggler.addEventListener("click", () => {
   header.classList.toggle("search-open");
+})
+
+/*menu*/
+const menu = document.querySelector(".burger-button");
+const mobile = document.querySelector(".mobile-menu");
+
+menu.addEventListener("click", () =>{
+  mobile.classList.toggle("mobile-menu-open");
+  menu.classList.toggle("burger-button-open");
 })
