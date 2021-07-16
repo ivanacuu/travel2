@@ -37,3 +37,25 @@ menu.addEventListener("click", () =>{
   mobile.classList.toggle("mobile-menu-open");
   menu.classList.toggle("burger-button-open");
 })
+
+/*accordion*/
+// const places = document.querySelector(".accordion-main-button");
+// const read = document.querySelector(".all-places");
+
+// places.addEventListener("click", () =>{
+//   read.classList.toggle("all-places-open");
+//   places.classList.toggle("accordion-main-button-active");
+// })
+
+const accordionContainer = document.querySelector(".all-places");
+
+accordionContainer.addEventListener("click", (e) => {
+  const accordions = Array.from(accordionContainer.children);
+  const clicked = e.target.closest(".accordion-places");
+  console.log(clicked);
+  if (!clicked) return;
+  accordions.forEach(function (acc) {
+    acc.classList.remove("accordion-description-open");
+  });
+  clicked.classList.add("accordion-description-open");
+});

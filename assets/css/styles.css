@@ -543,6 +543,100 @@
     font-size: 14px;
     font-weight: 500; }
 
+.accordion-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  text-align: center; }
+
+.accordion-main {
+  background-color: #F7B74F;
+  padding: 37px 20px 45px 20px;
+  text-align: center;
+  color: #F7F7F7; }
+  .accordion-main-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 40px; }
+  .accordion-main-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 30px; }
+  .accordion-main-text {
+    font-size: 12px;
+    line-height: 22px;
+    padding-bottom: 30px; }
+  .accordion-main-button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    position: relative;
+    font-size: 14px;
+    background-color: #f05a28;
+    border: 2px solid #4A79BC;
+    border-radius: 5px;
+    color: #F7F7F7;
+    padding: 15px 30px; }
+    .accordion-main-button:focus {
+      background-color: #ed6639; }
+
+.accordion-places {
+  background-color: #F7F7F7;
+  padding: 20px 20px 0 20px; }
+  .accordion-places-title {
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-bottom: 35px;
+    text-align: center; }
+  .accordion-places-box {
+    position: relative; }
+  .accordion-places-image {
+    width: 100%;
+    position: relative;
+    border-radius: 5px; }
+    .accordion-places-image > img {
+      width: 100%; }
+  .accordion-places .cta {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding-right: 8px;
+    display: flex;
+    align-items: end; }
+  .accordion-places-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #F7F7F7;
+    margin-right: 15px; }
+
+.accordion-description {
+  padding-bottom: 30px;
+  display: none; }
+  .accordion-description-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0 27px 0;
+    position: relative; }
+    .accordion-description-title:after {
+      content: "";
+      display: block;
+      margin: 15px auto 0 auto;
+      height: 2px;
+      background-color: #4A79BC;
+      width: 50px; }
+  .accordion-description-text {
+    font-size: 12px;
+    line-height: 22px; }
+
+.accordion .accordion-description-open .accordion-places-country .accordion-places-box .cta .arrow {
+  transform: rotate(180deg); }
+
+.accordion .accordion-description-open .accordion-places-country .accordion-description {
+  display: block; }
+
 section {
   padding: 0 20px; }
   @media screen and (min-width: 1180px) {
