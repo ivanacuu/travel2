@@ -31,7 +31,7 @@
     align-items: center; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header {
-        width: 1180px;
+        max-width: 1180px;
         margin: 0 auto; } }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header .logo {
@@ -144,7 +144,6 @@
           text-decoration: none;
           color: #2E2D2C;
           text-align: center;
-          height: 74px;
           display: block; }
         .hero-bgd .header .nav-menu li a:hover {
           border-bottom: 1px solid #F7B74F;
@@ -229,7 +228,7 @@
     padding: 0 20px; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .hero-content {
-        width: 1180px;
+        max-width: 1180px;
         margin: 0 auto;
         padding: 0; } }
     .hero-bgd .hero-content h1 {
@@ -276,7 +275,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer; }
+        cursor: pointer;
+        position: relative; }
         @media screen and (min-width: 768px) {
           .hero-bgd .hero-content-buttons a {
             width: unset;
@@ -546,12 +546,19 @@
 .accordion {
   position: relative; }
   .accordion .nesto {
-    position: relative; }
+    position: relative;
+    background-color: #F7B74F; }
+    @media screen and (min-width: 768px) {
+      .accordion .nesto {
+        margin: 0 60px;
+        padding-bottom: 60px; } }
     @media screen and (min-width: 1180px) {
       .accordion .nesto {
-        display: flex;
+        padding-bottom: 0;
+        height: unset;
         width: 1180px;
-        margin: 0 auto; } }
+        margin: 0 auto;
+        border-radius: 5px; } }
   .accordion-title {
     font-size: 23px;
     font-weight: bold;
@@ -563,9 +570,8 @@
     @media screen and (min-width: 1180px) {
       .accordion-title {
         font-size: 32px;
-        margin-bottom: 95px; } }
+        margin-bottom: 150px; } }
   .accordion-main {
-    background-color: #F7B74F;
     padding: 37px 20px 45px 20px;
     text-align: center;
     color: #F7F7F7; }
@@ -576,8 +582,8 @@
         padding: 25px 30px 45px 30px; } }
     @media screen and (min-width: 1180px) {
       .accordion-main {
-        margin: auto;
-        flex: 0 1 520px;
+        margin: 0;
+        width: 40%;
         text-align: left;
         padding: 25px 35px 30px 35px;
         border-radius: 5px 0 0 5px; } }
@@ -617,7 +623,8 @@
       background-color: #f05a28;
       border-radius: 5px;
       color: #F7F7F7;
-      padding: 15px 30px; }
+      padding: 15px 30px;
+      cursor: pointer; }
       .accordion-main-button:focus {
         background-color: #ed6639; }
   .accordion-places {
@@ -625,7 +632,6 @@
     padding: 20px 20px 0 20px; }
     @media screen and (min-width: 768px) {
       .accordion-places {
-        margin: 0 20px;
         padding: 30px 90px 0 90px;
         border-radius: 5px; }
         .accordion-places:last-child {
@@ -633,7 +639,8 @@
     @media screen and (min-width: 1180px) {
       .accordion-places {
         margin: 0;
-        padding: 30px 20px 0 20px; } }
+        padding: 30px 20px 0 20px;
+        border-radius: unset; } }
     .accordion-places-title {
       font-size: 23px;
       font-weight: bold;
@@ -649,7 +656,8 @@
     .accordion-places-image {
       width: 100%;
       position: relative;
-      border-radius: 5px; }
+      border-radius: 5px;
+      display: block; }
       .accordion-places-image > img {
         width: 100%; }
     .accordion-places .cta {
@@ -658,7 +666,8 @@
       right: 10px;
       padding-right: 8px;
       display: flex;
-      align-items: end; }
+      align-items: end;
+      cursor: pointer; }
       @media screen and (min-width: 768px) {
         .accordion-places .cta {
           bottom: 40%;
@@ -707,97 +716,97 @@
       .accordion-description {
         padding: 0; } }
   @media screen and (min-width: 768px) {
-    .accordion .after {
-      height: 60px;
-      margin: 0 60px;
-      background-color: #F7B74F;
-      border-radius: 0 0 5px 5px; } }
-  @media screen and (min-width: 1180px) {
-    .accordion .after {
-      margin: auto 0;
-      width: 150px;
-      height: 430px;
-      border-radius: 0 5px 5px 0; } }
+    .accordion .all-places {
+      width: 110%;
+      margin-left: -5.5%; } }
   @media screen and (min-width: 1180px) {
     .accordion .all-places {
-      flex: 0 1 580px; } }
+      position: absolute;
+      width: 45%;
+      right: 70px;
+      top: -20%;
+      left: unset; } }
   .accordion .accordion-description-open .accordion-places-country .accordion-places-box .cta .arrow {
     transform: rotate(180deg); }
   .accordion .accordion-description-open .accordion-places-country .accordion-description {
     display: block; }
 
-section {
-  padding: 0 20px; }
+@media screen and (min-width: 1180px) {
+  section {
+    max-width: 1180px;
+    margin: 0 auto; } }
+
+section h2 {
+  margin-bottom: 25px;
+  margin-top: 40px;
+  font-size: 23px;
+  font-weight: 500; }
   @media screen and (min-width: 1180px) {
-    section {
-      width: 1180px;
-      margin: 0 auto; } }
-  section h2 {
-    margin-bottom: 25px;
-    margin-top: 40px;
-    font-size: 23px;
-    font-weight: 500; }
-    @media screen and (min-width: 1180px) {
-      section h2 {
-        margin-bottom: 46px;
-        font-size: 28px; } }
-  section .heading-text {
-    font-size: 14px;
-    margin-bottom: 53px; }
+    section h2 {
+      margin-bottom: 46px;
+      font-size: 28px; } }
+
+section .heading-text {
+  font-size: 14px;
+  margin-bottom: 53px; }
+  @media screen and (min-width: 768px) {
+    section .heading-text {
+      margin-bottom: 32px; } }
+  @media screen and (min-width: 1180px) {
+    section .heading-text {
+      margin-bottom: 36px;
+      font-size: 16px; } }
+
+section .heading-list {
+  margin-bottom: 60px;
+  margin-left: 20px;
+  font-size: 14px; }
+  @media screen and (min-width: 768px) {
+    section .heading-list {
+      margin-bottom: 48px; } }
+  @media screen and (min-width: 1180px) {
+    section .heading-list {
+      margin-bottom: 58px;
+      font-size: 16px; } }
+  section .heading-list li {
+    margin-bottom: 25px; }
+    section .heading-list li:last-child {
+      margin-bottom: 0; }
     @media screen and (min-width: 768px) {
-      section .heading-text {
-        margin-bottom: 32px; } }
-    @media screen and (min-width: 1180px) {
-      section .heading-text {
-        margin-bottom: 36px;
-        font-size: 16px; } }
-  section .heading-list {
-    margin-bottom: 60px;
-    margin-left: 20px;
-    font-size: 14px; }
-    @media screen and (min-width: 768px) {
-      section .heading-list {
-        margin-bottom: 48px; } }
-    @media screen and (min-width: 1180px) {
-      section .heading-list {
-        margin-bottom: 58px;
-        font-size: 16px; } }
-    section .heading-list li {
-      margin-bottom: 25px; }
-      section .heading-list li:last-child {
-        margin-bottom: 0; }
-      @media screen and (min-width: 768px) {
-        section .heading-list li {
-          padding-left: 15px; } }
-    section .heading-list li::marker {
-      font-size: 20px; }
-  section h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 27px; }
-    @media screen and (min-width: 768px) {
-      section h3 {
-        margin-bottom: 35px; } }
-    @media screen and (min-width: 1180px) {
-      section h3 {
-        margin-bottom: 46px;
-        font-size: 23px; } }
-  section .subheading-list {
-    margin-bottom: 35px;
-    font-size: 14px; }
-    @media screen and (min-width: 1180px) {
-      section .subheading-list {
-        font-size: 16px; } }
-    section .subheading-list > a {
-      text-decoration: none;
-      color: #4A79BC; }
-      section .subheading-list > a:hover {
-        text-decoration: underline; }
-  section > p {
-    font-size: 14px; }
-    @media screen and (min-width: 1180px) {
-      section > p {
-        font-size: 16px; } }
+      section .heading-list li {
+        padding-left: 15px; } }
+  section .heading-list li::marker {
+    font-size: 20px; }
+
+section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 27px; }
+  @media screen and (min-width: 768px) {
+    section h3 {
+      margin-bottom: 35px; } }
+  @media screen and (min-width: 1180px) {
+    section h3 {
+      margin-bottom: 46px;
+      font-size: 23px; } }
+
+section .subheading-list {
+  margin-bottom: 35px;
+  font-size: 14px; }
+  @media screen and (min-width: 1180px) {
+    section .subheading-list {
+      font-size: 16px; } }
+  section .subheading-list > a {
+    text-decoration: none;
+    color: #4A79BC; }
+    section .subheading-list > a:hover {
+      text-decoration: underline; }
+
+section > p {
+  font-size: 14px; }
+  @media screen and (min-width: 1180px) {
+    section > p {
+      font-size: 16px; } }
 
 .form {
   background-color: #F7F7F7;
@@ -896,7 +905,8 @@ section {
             height: 142px; } }
     .form .gray-bgd .form-body__checkbox {
       display: flex;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      cursor: pointer; }
       @media screen and (min-width: 1180px) {
         .form .gray-bgd .form-body__checkbox {
           margin-bottom: 30px; } }
@@ -923,7 +933,8 @@ section {
     border-radius: 5px;
     outline: none;
     border: none;
-    padding: 15px 35px; }
+    padding: 15px 35px;
+    cursor: pointer; }
     .form button:hover {
       opacity: 0.5; }
 
@@ -963,7 +974,8 @@ section {
       font-size: 14px;
       font-weight: 500;
       list-style: none;
-      color: #F7F7F7; }
+      color: #F7F7F7;
+      cursor: pointer; }
       .footer-top .footer-menu nav ul li:hover {
         text-decoration: underline; }
 
@@ -982,7 +994,7 @@ section {
         padding: 20px 20px 15px 20px; } }
     @media screen and (min-width: 1180px) {
       .footer-legal__container {
-        width: 1180px;
+        max-width: 1180px;
         margin: 0 auto; } }
   .footer-legal__text {
     font-size: 12px;
@@ -993,7 +1005,8 @@ section {
         order: inherit;
         font-weight: 500; } }
   .footer-legal__logo {
-    margin-bottom: 33px; }
+    margin-bottom: 33px;
+    cursor: pointer; }
     .footer-legal__logo img {
       height: 26px;
       width: 29px; }
@@ -1038,3 +1051,9 @@ p {
 ul {
   -webkit-padding-start: 0;
           padding-inline-start: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }

@@ -1,10 +1,10 @@
 section{
-  padding: 0 20px;
+  // padding: 0 20px;
   @include tablet{
 
   }
   @include desktop{
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
   }
   h2{

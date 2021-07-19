@@ -44,6 +44,7 @@
             font-weight: 500;
             list-style: none;
             color: $white;
+            cursor: pointer;
             &:hover{
               text-decoration: underline;
             }
@@ -66,7 +67,7 @@
       padding: 20px 20px 15px 20px;
     }
     @include desktop{
-      width: 1180px;
+      max-width: 1180px;
       margin: 0 auto;
     }
   }
@@ -81,6 +82,7 @@
   }
   &__logo{
     margin-bottom: 33px;
+    cursor: pointer;
     img{
       height: 26px;
       width: 29px;

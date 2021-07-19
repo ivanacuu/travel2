@@ -2,10 +2,17 @@
   position: relative;
   .nesto{
     position: relative;
+    background-color: $orange;
+    @include tablet{
+      margin: 0 60px;
+      padding-bottom: 60px;
+    }
     @include desktop{
-      display: flex;
+      padding-bottom: 0;
+      height: unset;
       width: 1180px;
       margin: 0 auto;
+      border-radius: 5px;
     }
   }
   &-title{
@@ -18,11 +25,10 @@
     }
     @include desktop{
       font-size: 32px;
-      margin-bottom: 95px;
+      margin-bottom: 150px;
     }
   }
   &-main{
-    background-color: $orange;
     padding: 37px 20px 45px 20px;
     text-align: center;
     color: $white;
@@ -32,8 +38,8 @@
       padding: 25px 30px 45px 30px;
     }
     @include desktop{
-      margin: auto;
-      flex: 0 1 520px;
+      margin: 0;
+      width: 40%;
       text-align: left;
       padding: 25px 35px 30px 35px;
       border-radius: 5px 0 0 5px;
@@ -78,6 +84,7 @@
       border-radius: 5px;
       color: $white;
       padding: 15px 30px;
+      cursor: pointer;
       &:focus{
         background-color: #ed6639;
       }
@@ -87,7 +94,6 @@
     background-color: $white;
     padding: 20px 20px 0 20px;
     @include tablet{
-      margin: 0 20px;
       padding: 30px 90px 0 90px;
       border-radius: 5px;
       &:last-child{
@@ -97,6 +103,7 @@
     @include desktop{
       margin: 0;
       padding: 30px 20px 0 20px;
+      border-radius: unset;
     }
     &-title{
       font-size: 23px;
@@ -116,6 +123,7 @@
       width: 100%;
       position: relative;
       border-radius: 5px;
+      display: block;
       >img{
         width: 100%;
       }
@@ -127,6 +135,7 @@
       padding-right: 8px;
       display: flex;
       align-items: end;
+      cursor: pointer;
       @include tablet{
         bottom: 40%;
         right: 17px;
@@ -181,23 +190,19 @@
       padding: 0;
     }
   }
-  .after{
-    @include tablet{
-      height: 60px;
-      margin: 0 60px;
-      background-color: $orange;
-      border-radius: 0 0 5px 5px;
-    }
-    @include desktop{
-      margin: auto 0;
-      width: 150px;
-      height: 430px;
-      border-radius: 0 5px 5px 0;
-    }
-  }
   .all-places{
+    @include tablet{
+      width: 110%;
+      margin-left: - 5.5%;
+    }
     @include desktop{
-      flex: 0 1 580px;
+      position: absolute;
+      width: 45%;
+      right: 70px;
+      top: -20%;
+      // top: 50%;
+      // transform: translateY(-50%);
+      left: unset;
     }
   }
   .accordion-description-open{

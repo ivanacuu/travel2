@@ -108,6 +108,7 @@
       &__checkbox{
         display: flex;
         margin-bottom: 40px;
+        cursor: pointer;
         @include desktop{
           margin-bottom: 30px;
         }
@@ -140,6 +141,7 @@
     outline: none;
     border: none;
     padding: 15px 35px;
+    cursor: pointer;
     &:hover {
       opacity: 0.5;
     }

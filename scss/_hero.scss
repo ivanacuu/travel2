@@ -14,7 +14,7 @@
     height: 70px;
     align-items: center;
     @include desktop{
-      width: 1180px;
+      max-width: 1180px;
       margin: 0 auto;
     }
     .logo{
@@ -167,7 +167,7 @@
           text-decoration: none;
           color: $black;
           text-align: center;
-          height: 74px;
+          // height: 74px;
           display: block;
         }
         a:hover{
@@ -279,7 +279,7 @@
   .hero-content{
     padding: 0 20px;
     @include desktop{
-      width: 1180px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 0;
     }
@@ -332,6 +332,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        position: relative;
         @include tablet{
           width: unset;
           padding: 17px 35px;
