@@ -39,14 +39,6 @@ menu.addEventListener("click", () =>{
 })
 
 /*accordion*/
-// const places = document.querySelector(".accordion-main-button");
-// const read = document.querySelector(".all-places");
-
-// places.addEventListener("click", () =>{
-//   read.classList.toggle("all-places-open");
-//   places.classList.toggle("accordion-main-button-active");
-// })
-
 const accordionContainer = document.querySelector(".all-places");
 
 accordionContainer.addEventListener("click", (e) => {

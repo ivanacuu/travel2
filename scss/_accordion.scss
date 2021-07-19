@@ -1,29 +1,71 @@
 .accordion{
+  position: relative;
+  .nesto{
+    position: relative;
+    @include desktop{
+      display: flex;
+      width: 1180px;
+      margin: 0 auto;
+    }
+  }
   &-title{
     font-size: 23px;
     font-weight: bold;
     margin-bottom: 45px;
     text-align: center;
+    @include tablet{
+      font-size: 28px;
+    }
+    @include desktop{
+      font-size: 32px;
+      margin-bottom: 95px;
+    }
   }
   &-main{
     background-color: $orange;
     padding: 37px 20px 45px 20px;
     text-align: center;
     color: $white;
+    @include tablet{
+      margin: 0 60px;
+      border-radius: 5px 5px 0 0;
+      padding: 25px 30px 45px 30px;
+    }
+    @include desktop{
+      margin: auto;
+      flex: 0 1 520px;
+      text-align: left;
+      padding: 25px 35px 30px 35px;
+      border-radius: 5px 0 0 5px;
+    }
     &-title{
       font-size: 18px;
       font-weight: bold;
       padding-bottom: 40px;
+      @include tablet{
+        font-size: 20px;
+      }
+      @include desktop{
+        font-size: 28px;
+        padding-bottom: 80px;
+      }
     }
     &-subtitle{
       font-size: 14px;
       font-weight: bold;
       padding-bottom: 30px;
+      @include desktop{
+        font-size: 16px;
+      }
     }
     &-text{
       font-size: 12px;
       line-height: 22px;
       padding-bottom: 30px;
+      @include tablet{
+        font-size: 14px;
+        padding-bottom: 40px;
+      }
     }
     &-button{
       background: none;
@@ -33,7 +75,6 @@
       position: relative;
       font-size: 14px;
       background-color: $red-button;
-      border: 2px solid $blue;
       border-radius: 5px;
       color: $white;
       padding: 15px 30px;
@@ -45,12 +86,28 @@
   &-places{
     background-color: $white;
     padding: 20px 20px 0 20px;
+    @include tablet{
+      margin: 0 20px;
+      padding: 30px 90px 0 90px;
+      border-radius: 5px;
+      &:last-child{
+        padding-bottom: 45px;
+      }
+    }
+    @include desktop{
+      margin: 0;
+      padding: 30px 20px 0 20px;
+    }
     &-title{
       font-size: 23px;
       font-weight: bold;
       line-height: 24px;
       padding-bottom: 35px;
       text-align: center;
+      padding-top: 15px;
+      @include tablet{
+        padding-top: 5px;
+      }
     }
     &-box{
       position: relative;
@@ -70,6 +127,10 @@
       padding-right: 8px;
       display: flex;
       align-items: end;
+      @include tablet{
+        bottom: 40%;
+        right: 17px;
+      }
     }
     &-link{
       font-size: 18px;
@@ -87,6 +148,9 @@
       text-align: center;
       padding: 40px 0 27px 0;
       position: relative;
+      @include tablet{
+        font-size: 18px;
+      }
       &:after{
         content: ""; 
         display: block;
@@ -99,6 +163,41 @@
     &-text{
       font-size: 12px;
       line-height: 22px;
+      @include tablet{
+        font-size: 14px;
+        line-height: 23px;
+      }
+      @include desktop{
+        padding: 0 20px 30px 20px;
+      }
+    }
+    @include tablet{
+      background-color: #fff;
+      margin: 0 8px;
+      padding: 0 20px 20px 20px;
+      text-align: center;
+    }
+    @include desktop{
+      padding: 0;
+    }
+  }
+  .after{
+    @include tablet{
+      height: 60px;
+      margin: 0 60px;
+      background-color: $orange;
+      border-radius: 0 0 5px 5px;
+    }
+    @include desktop{
+      margin: auto 0;
+      width: 150px;
+      height: 430px;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+  .all-places{
+    @include desktop{
+      flex: 0 1 580px;
     }
   }
   .accordion-description-open{
