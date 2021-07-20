@@ -1,13 +1,16 @@
+footer {
+  background-color: $blue;
+
+}
 .footer-top{
   display: none;
-  background-color: $blue;
   @include desktop{
     display: block;
   }
-  .footer-box{
+  .container{
     display: flex;
     justify-content: space-between;
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 85px 0 65px 0;
     .footer-info{
@@ -55,7 +58,7 @@
 }
 .footer-legal{
   background-color: $light-blue;
-  &__container{
+  .container{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -64,11 +67,7 @@
     @include tablet{
       flex-direction: row;
       justify-content: space-between;
-      padding: 20px 20px 15px 20px;
-    }
-    @include desktop{
-      max-width: 1180px;
-      margin: 0 auto;
+      padding: 20px 0 15px 0;
     }
   }
   &__text{

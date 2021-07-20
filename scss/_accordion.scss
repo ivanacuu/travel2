@@ -1,17 +1,17 @@
 .accordion{
   position: relative;
-  .nesto{
+  .services{
     position: relative;
     background-color: $orange;
     @include tablet{
-      margin: 0 60px;
       padding-bottom: 60px;
+      width: 80%;
+      margin: 0 auto;
     }
     @include desktop{
+      width: 100%;
       padding-bottom: 0;
       height: unset;
-      width: 1180px;
-      margin: 0 auto;
       border-radius: 5px;
     }
   }
@@ -192,8 +192,10 @@
   }
   .all-places{
     @include tablet{
-      width: 110%;
-      margin-left: - 5.5%;
+      // width: 110%;
+      // margin-left: - 5.5%;
+      width: 125%;
+      margin-left: -12.5%;
     }
     @include desktop{
       position: absolute;
@@ -223,4 +225,11 @@
       }
     }
   }
+
+
+  // &.container{
+  //   @include desktop{
+  //     width: 1180px;
+  //   }
+  // }
 }

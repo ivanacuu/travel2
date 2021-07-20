@@ -14,6 +14,16 @@
   src: url(../fonts/Montserrat-Bold.ttf);
   font-weight: bold; }
 
+.container {
+  width: 100%;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 90%; } }
+  @media screen and (min-width: 1180px) {
+    .container {
+      width: 1180px; } }
+
 .hero-bgd {
   background-image: url("../images/Hero.jpg");
   background-position: center center;
@@ -22,17 +32,24 @@
   box-sizing: border-box;
   z-index: 0; }
   .hero-bgd .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #F7F7F7;
-    padding: 5px 20px 5px 20px;
-    position: relative;
-    height: 70px;
-    align-items: center; }
+    background-color: #F7F7F7; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header {
-        max-width: 1180px;
-        margin: 0 auto; } }
+        background-color: unset; } }
+    .hero-bgd .header .container {
+      background-color: #F7F7F7;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 20px 5px 20px;
+      position: relative;
+      height: 70px;
+      align-items: center; }
+      @media screen and (min-width: 768px) {
+        .hero-bgd .header .container {
+          padding: 0; } }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .container {
+          padding: 5px 20px 5px 20px; } }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header .logo {
         display: flex;
@@ -226,10 +243,8 @@
           display: flex; } }
   .hero-bgd .hero-content {
     padding: 0 20px; }
-    @media screen and (min-width: 1180px) {
+    @media screen and (min-width: 768px) {
       .hero-bgd .hero-content {
-        max-width: 1180px;
-        margin: 0 auto;
         padding: 0; } }
     .hero-bgd .hero-content h1 {
       font-weight: bold;
@@ -545,19 +560,19 @@
 
 .accordion {
   position: relative; }
-  .accordion .nesto {
+  .accordion .services {
     position: relative;
     background-color: #F7B74F; }
     @media screen and (min-width: 768px) {
-      .accordion .nesto {
-        margin: 0 60px;
-        padding-bottom: 60px; } }
+      .accordion .services {
+        padding-bottom: 60px;
+        width: 80%;
+        margin: 0 auto; } }
     @media screen and (min-width: 1180px) {
-      .accordion .nesto {
+      .accordion .services {
+        width: 100%;
         padding-bottom: 0;
         height: unset;
-        width: 1180px;
-        margin: 0 auto;
         border-radius: 5px; } }
   .accordion-title {
     font-size: 23px;
@@ -717,8 +732,8 @@
         padding: 0; } }
   @media screen and (min-width: 768px) {
     .accordion .all-places {
-      width: 110%;
-      margin-left: -5.5%; } }
+      width: 125%;
+      margin-left: -12.5%; } }
   @media screen and (min-width: 1180px) {
     .accordion .all-places {
       position: absolute;
@@ -731,134 +746,129 @@
   .accordion .accordion-description-open .accordion-places-country .accordion-description {
     display: block; }
 
-@media screen and (min-width: 1180px) {
-  section {
-    max-width: 1180px;
-    margin: 0 auto; } }
-
-section h2 {
-  margin-bottom: 25px;
-  margin-top: 40px;
-  font-size: 23px;
-  font-weight: 500; }
-  @media screen and (min-width: 1180px) {
-    section h2 {
-      margin-bottom: 46px;
-      font-size: 28px; } }
-
-section .heading-text {
-  font-size: 14px;
-  margin-bottom: 53px; }
+section .rte {
+  padding: 0 20px; }
   @media screen and (min-width: 768px) {
-    section .heading-text {
-      margin-bottom: 32px; } }
+    section .rte {
+      padding: 0; } }
   @media screen and (min-width: 1180px) {
-    section .heading-text {
-      margin-bottom: 36px;
-      font-size: 16px; } }
-
-section .heading-list {
-  margin-bottom: 60px;
-  margin-left: 20px;
-  font-size: 14px; }
-  @media screen and (min-width: 768px) {
-    section .heading-list {
-      margin-bottom: 48px; } }
-  @media screen and (min-width: 1180px) {
-    section .heading-list {
-      margin-bottom: 58px;
-      font-size: 16px; } }
-  section .heading-list li {
-    margin-bottom: 25px; }
-    section .heading-list li:last-child {
-      margin-bottom: 0; }
+    section .rte {
+      max-width: 985px; } }
+  section .rte h2 {
+    margin-bottom: 25px;
+    margin-top: 40px;
+    font-size: 23px;
+    font-weight: 500; }
+    @media screen and (min-width: 1180px) {
+      section .rte h2 {
+        margin-bottom: 46px;
+        font-size: 28px; } }
+  section .rte .heading-text {
+    font-size: 14px;
+    margin-bottom: 53px; }
     @media screen and (min-width: 768px) {
-      section .heading-list li {
-        padding-left: 15px; } }
-  section .heading-list li::marker {
-    font-size: 20px; }
-
-section h3 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 27px; }
-  @media screen and (min-width: 768px) {
-    section h3 {
-      margin-bottom: 35px; } }
-  @media screen and (min-width: 1180px) {
-    section h3 {
-      margin-bottom: 46px;
-      font-size: 23px; } }
-
-section .subheading-list {
-  margin-bottom: 35px;
-  font-size: 14px; }
-  @media screen and (min-width: 1180px) {
-    section .subheading-list {
-      font-size: 16px; } }
-  section .subheading-list > a {
-    text-decoration: none;
-    color: #4A79BC; }
-    section .subheading-list > a:hover {
-      text-decoration: underline; }
-
-section > p {
-  font-size: 14px; }
-  @media screen and (min-width: 1180px) {
-    section > p {
-      font-size: 16px; } }
+      section .rte .heading-text {
+        margin-bottom: 32px; } }
+    @media screen and (min-width: 1180px) {
+      section .rte .heading-text {
+        margin-bottom: 36px;
+        font-size: 16px; } }
+  section .rte .heading-list {
+    margin-bottom: 60px;
+    margin-left: 20px;
+    font-size: 14px; }
+    @media screen and (min-width: 768px) {
+      section .rte .heading-list {
+        margin-bottom: 48px; } }
+    @media screen and (min-width: 1180px) {
+      section .rte .heading-list {
+        margin-bottom: 58px;
+        font-size: 16px; } }
+    section .rte .heading-list li {
+      margin-bottom: 25px; }
+      section .rte .heading-list li:last-child {
+        margin-bottom: 0; }
+      @media screen and (min-width: 768px) {
+        section .rte .heading-list li {
+          padding-left: 15px; } }
+    section .rte .heading-list li::marker {
+      font-size: 20px; }
+  section .rte h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 27px; }
+    @media screen and (min-width: 768px) {
+      section .rte h3 {
+        margin-bottom: 35px; } }
+    @media screen and (min-width: 1180px) {
+      section .rte h3 {
+        margin-bottom: 46px;
+        font-size: 23px; } }
+  section .rte .subheading-list {
+    margin-bottom: 35px;
+    font-size: 14px; }
+    @media screen and (min-width: 1180px) {
+      section .rte .subheading-list {
+        font-size: 16px; } }
+    section .rte .subheading-list > a {
+      text-decoration: none;
+      color: #4A79BC; }
+      section .rte .subheading-list > a:hover {
+        text-decoration: underline; }
+  section .rte > p {
+    font-size: 14px; }
+    @media screen and (min-width: 1180px) {
+      section .rte > p {
+        font-size: 16px; } }
 
 .form {
   background-color: #F7F7F7;
   margin-top: 75px; }
   @media screen and (min-width: 1180px) {
     .form {
-      padding: 0 20px;
       margin-top: 125px; } }
-  .form .gray-bgd {
+  .form .container {
     padding: 55px 20px; }
     @media screen and (min-width: 768px) {
-      .form .gray-bgd {
+      .form .container {
         padding: 63px 130px 112px 130px; } }
     @media screen and (min-width: 1180px) {
-      .form .gray-bgd {
-        max-width: 1180px;
-        padding: 70px 0 100px 0;
-        margin: 0 auto; } }
+      .form .container {
+        padding: 70px 0 100px 0; } }
     @media screen and (min-width: 1180px) {
-      .form .gray-bgd .form-vector {
+      .form .container .form-vector {
         display: flex;
         justify-content: space-between; } }
-    .form .gray-bgd .form-vector img {
+    .form .container .form-vector img {
       width: 100%;
       display: none;
       height: 430px; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-vector img {
+        .form .container .form-vector img {
           display: block;
           margin-right: 65px;
           margin-top: 45px; } }
-    .form .gray-bgd p {
+    .form .container p {
       font-size: 23px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 40px; }
       @media screen and (min-width: 768px) {
-        .form .gray-bgd p {
+        .form .container p {
           margin-bottom: 57px;
           font-size: 28px; } }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd p {
+        .form .container p {
           margin-bottom: 78px;
           font-size: 32px; } }
-    .form .gray-bgd .form-body label {
+    .form .container .form-body label {
       margin-bottom: 12px;
       font-size: 12px;
       font-weight: bold; }
       @media screen and (min-width: 768px) {
-        .form .gray-bgd .form-body label {
+        .form .container .form-body label {
           font-size: 14px; } }
-    .form .gray-bgd .form-body input {
+    .form .container .form-body input {
       font-size: 14px;
       font-weight: 500;
       height: 43px;
@@ -867,30 +877,30 @@ section > p {
       background-color: #F7F7F7;
       padding-left: 14px; }
       @media screen and (min-width: 768px) {
-        .form .gray-bgd .form-body input {
+        .form .container .form-body input {
           height: 55px;
           font-size: 16px; } }
-    .form .gray-bgd .form-body__name {
+    .form .container .form-body__name {
       width: 100%;
       display: inline-flex;
       flex-direction: column; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__name {
+        .form .container .form-body__name {
           margin-bottom: 5px; } }
-    .form .gray-bgd .form-body__mail {
+    .form .container .form-body__mail {
       width: 100%;
       display: inline-flex;
       flex-direction: column; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__mail {
+        .form .container .form-body__mail {
           margin-bottom: 5px; } }
-    .form .gray-bgd .form-body__mgs {
+    .form .container .form-body__mgs {
       display: inline-flex;
       flex-direction: column; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__mgs {
+        .form .container .form-body__mgs {
           margin-bottom: 5px; } }
-      .form .gray-bgd .form-body__mgs textarea {
+      .form .container .form-body__mgs textarea {
         width: 100%;
         box-sizing: border-box;
         background-color: #F7F7F7;
@@ -901,28 +911,28 @@ section > p {
         padding: 22px 0 0 14px;
         height: 100px; }
         @media screen and (min-width: 1180px) {
-          .form .gray-bgd .form-body__mgs textarea {
+          .form .container .form-body__mgs textarea {
             height: 142px; } }
-    .form .gray-bgd .form-body__checkbox {
+    .form .container .form-body__checkbox {
       display: flex;
       margin-bottom: 40px;
       cursor: pointer; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__checkbox {
+        .form .container .form-body__checkbox {
           margin-bottom: 30px; } }
-      .form .gray-bgd .form-body__checkbox input {
+      .form .container .form-body__checkbox input {
         width: 20px;
         height: 20px;
         border: 1px solid #575756;
         border-radius: 5px; }
-      .form .gray-bgd .form-body__checkbox label {
+      .form .container .form-body__checkbox label {
         font-size: 14px;
         font-weight: 400;
         margin-bottom: unset;
         align-self: center;
         margin-left: 15px; }
         @media screen and (min-width: 1180px) {
-          .form .gray-bgd .form-body__checkbox label {
+          .form .container .form-body__checkbox label {
             margin-left: 5px; } }
   .form button {
     font-size: 14px;
@@ -938,28 +948,30 @@ section > p {
     .form button:hover {
       opacity: 0.5; }
 
-.footer-top {
-  display: none;
+footer {
   background-color: #4A79BC; }
+
+.footer-top {
+  display: none; }
   @media screen and (min-width: 1180px) {
     .footer-top {
       display: block; } }
-  .footer-top .footer-box {
+  .footer-top .container {
     display: flex;
     justify-content: space-between;
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 85px 0 65px 0; }
-    .footer-top .footer-box .footer-info {
+    .footer-top .container .footer-info {
       margin-right: 168px;
       font-size: 14px;
       font-weight: 500; }
-      .footer-top .footer-box .footer-info img {
+      .footer-top .container .footer-info img {
         margin-bottom: 40px; }
-      .footer-top .footer-box .footer-info p {
+      .footer-top .container .footer-info p {
         padding-bottom: 25px;
         color: #F7F7F7; }
-        .footer-top .footer-box .footer-info p:last-child {
+        .footer-top .container .footer-info p:last-child {
           padding-bottom: 0; }
   .footer-top .footer-menu nav {
     display: flex; }
@@ -981,21 +993,17 @@ section > p {
 
 .footer-legal {
   background-color: #87C5EC; }
-  .footer-legal__container {
+  .footer-legal .container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
     padding: 40px 0 10px 0; }
     @media screen and (min-width: 768px) {
-      .footer-legal__container {
+      .footer-legal .container {
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px 20px 15px 20px; } }
-    @media screen and (min-width: 1180px) {
-      .footer-legal__container {
-        max-width: 1180px;
-        margin: 0 auto; } }
+        padding: 20px 0 15px 0; } }
   .footer-legal__text {
     font-size: 12px;
     order: 1;
