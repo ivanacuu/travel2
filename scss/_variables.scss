@@ -6,6 +6,7 @@ $blue: #4A79BC;
 $black: #2E2D2C;
 $dark-gray: #3C3C3B;
 $gray: #575756;
+$red-button: #f05a28;
 
 @font-face {
   font-family: travelFont;
@@ -44,5 +45,16 @@ $desktop: 1180px;
 @mixin desktop {
   @media screen and (min-width: #{$desktop}) {
     @content;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  @include tablet(){
+    width: 90%;
+  }
+  @include desktop(){
+    width: 1180px;
   }
 }

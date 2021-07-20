@@ -14,6 +14,16 @@
   src: url(../fonts/Montserrat-Bold.ttf);
   font-weight: bold; }
 
+.container {
+  width: 100%;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 90%; } }
+  @media screen and (min-width: 1180px) {
+    .container {
+      width: 1180px; } }
+
 .hero-bgd {
   background-image: url("../images/Hero.jpg");
   background-position: center center;
@@ -22,17 +32,24 @@
   box-sizing: border-box;
   z-index: 0; }
   .hero-bgd .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #F7F7F7;
-    padding: 5px 20px 5px 20px;
-    position: relative;
-    height: 70px;
-    align-items: center; }
+    background-color: #F7F7F7; }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header {
-        width: 1180px;
-        margin: 0 auto; } }
+        background-color: unset; } }
+    .hero-bgd .header .container {
+      background-color: #F7F7F7;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 20px 5px 20px;
+      position: relative;
+      height: 70px;
+      align-items: center; }
+      @media screen and (min-width: 768px) {
+        .hero-bgd .header .container {
+          padding: 0; } }
+      @media screen and (min-width: 1180px) {
+        .hero-bgd .header .container {
+          padding: 5px 20px 5px 20px; } }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header .logo {
         display: flex;
@@ -144,7 +161,6 @@
           text-decoration: none;
           color: #2E2D2C;
           text-align: center;
-          height: 74px;
           display: block; }
         .hero-bgd .header .nav-menu li a:hover {
           border-bottom: 1px solid #F7B74F;
@@ -227,10 +243,8 @@
           display: flex; } }
   .hero-bgd .hero-content {
     padding: 0 20px; }
-    @media screen and (min-width: 1180px) {
+    @media screen and (min-width: 768px) {
       .hero-bgd .hero-content {
-        width: 1180px;
-        margin: 0 auto;
         padding: 0; } }
     .hero-bgd .hero-content h1 {
       font-weight: bold;
@@ -276,7 +290,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer; }
+        cursor: pointer;
+        position: relative; }
         @media screen and (min-width: 768px) {
           .hero-bgd .hero-content-buttons a {
             width: unset;
@@ -543,77 +558,267 @@
     font-size: 14px;
     font-weight: 500; }
 
-section {
-  padding: 0 20px; }
+.accordion {
+  position: relative; }
+  .accordion .services {
+    position: relative;
+    background-color: #F7B74F; }
+    @media screen and (min-width: 768px) {
+      .accordion .services {
+        padding-bottom: 60px;
+        width: 80%;
+        margin: 0 auto; } }
+    @media screen and (min-width: 1180px) {
+      .accordion .services {
+        width: 100%;
+        padding-bottom: 0;
+        height: unset;
+        border-radius: 5px; } }
+  .accordion-title {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 45px;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .accordion-title {
+        font-size: 28px; } }
+    @media screen and (min-width: 1180px) {
+      .accordion-title {
+        font-size: 32px;
+        margin-bottom: 150px; } }
+  .accordion-main {
+    padding: 37px 20px 45px 20px;
+    text-align: center;
+    color: #F7F7F7; }
+    @media screen and (min-width: 768px) {
+      .accordion-main {
+        margin: 0 60px;
+        border-radius: 5px 5px 0 0;
+        padding: 25px 30px 45px 30px; } }
+    @media screen and (min-width: 1180px) {
+      .accordion-main {
+        margin: 0;
+        width: 40%;
+        text-align: left;
+        padding: 25px 35px 30px 35px;
+        border-radius: 5px 0 0 5px; } }
+    .accordion-main-title {
+      font-size: 18px;
+      font-weight: bold;
+      padding-bottom: 40px; }
+      @media screen and (min-width: 768px) {
+        .accordion-main-title {
+          font-size: 20px; } }
+      @media screen and (min-width: 1180px) {
+        .accordion-main-title {
+          font-size: 28px;
+          padding-bottom: 80px; } }
+    .accordion-main-subtitle {
+      font-size: 14px;
+      font-weight: bold;
+      padding-bottom: 30px; }
+      @media screen and (min-width: 1180px) {
+        .accordion-main-subtitle {
+          font-size: 16px; } }
+    .accordion-main-text {
+      font-size: 12px;
+      line-height: 22px;
+      padding-bottom: 30px; }
+      @media screen and (min-width: 768px) {
+        .accordion-main-text {
+          font-size: 14px;
+          padding-bottom: 40px; } }
+    .accordion-main-button {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0;
+      position: relative;
+      font-size: 14px;
+      background-color: #f05a28;
+      border-radius: 5px;
+      color: #F7F7F7;
+      padding: 15px 30px;
+      cursor: pointer; }
+      .accordion-main-button:focus {
+        background-color: #ed6639; }
+  .accordion-places {
+    background-color: #F7F7F7;
+    padding: 20px 20px 0 20px; }
+    @media screen and (min-width: 768px) {
+      .accordion-places {
+        padding: 30px 90px 0 90px;
+        border-radius: 5px; }
+        .accordion-places:last-child {
+          padding-bottom: 45px; } }
+    @media screen and (min-width: 1180px) {
+      .accordion-places {
+        margin: 0;
+        padding: 30px 20px 0 20px;
+        border-radius: unset; } }
+    .accordion-places-title {
+      font-size: 23px;
+      font-weight: bold;
+      line-height: 24px;
+      padding-bottom: 35px;
+      text-align: center;
+      padding-top: 15px; }
+      @media screen and (min-width: 768px) {
+        .accordion-places-title {
+          padding-top: 5px; } }
+    .accordion-places-box {
+      position: relative; }
+    .accordion-places-image {
+      width: 100%;
+      position: relative;
+      border-radius: 5px;
+      display: block; }
+      .accordion-places-image > img {
+        width: 100%; }
+    .accordion-places .cta {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding-right: 8px;
+      display: flex;
+      align-items: end;
+      cursor: pointer; }
+      @media screen and (min-width: 768px) {
+        .accordion-places .cta {
+          bottom: 40%;
+          right: 17px; } }
+    .accordion-places-link {
+      font-size: 18px;
+      font-weight: bold;
+      color: #F7F7F7;
+      margin-right: 15px; }
+  .accordion-description {
+    padding-bottom: 30px;
+    display: none; }
+    .accordion-description-title {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      padding: 40px 0 27px 0;
+      position: relative; }
+      @media screen and (min-width: 768px) {
+        .accordion-description-title {
+          font-size: 18px; } }
+      .accordion-description-title:after {
+        content: "";
+        display: block;
+        margin: 15px auto 0 auto;
+        height: 2px;
+        background-color: #4A79BC;
+        width: 50px; }
+    .accordion-description-text {
+      font-size: 12px;
+      line-height: 22px; }
+      @media screen and (min-width: 768px) {
+        .accordion-description-text {
+          font-size: 14px;
+          line-height: 23px; } }
+      @media screen and (min-width: 1180px) {
+        .accordion-description-text {
+          padding: 0 20px 30px 20px; } }
+    @media screen and (min-width: 768px) {
+      .accordion-description {
+        background-color: #fff;
+        margin: 0 8px;
+        padding: 0 20px 20px 20px;
+        text-align: center; } }
+    @media screen and (min-width: 1180px) {
+      .accordion-description {
+        padding: 0; } }
+  @media screen and (min-width: 768px) {
+    .accordion .all-places {
+      width: 125%;
+      margin-left: -12.5%; } }
   @media screen and (min-width: 1180px) {
-    section {
-      width: 1180px;
-      margin: 0 auto; } }
-  section h2 {
+    .accordion .all-places {
+      position: absolute;
+      width: 45%;
+      right: 70px;
+      top: -20%;
+      left: unset; } }
+  .accordion .accordion-description-open .accordion-places-country .accordion-places-box .cta .arrow {
+    transform: rotate(180deg); }
+  .accordion .accordion-description-open .accordion-places-country .accordion-description {
+    display: block; }
+
+section .rte {
+  padding: 0 20px; }
+  @media screen and (min-width: 768px) {
+    section .rte {
+      padding: 0; } }
+  @media screen and (min-width: 1180px) {
+    section .rte {
+      max-width: 985px; } }
+  section .rte h2 {
     margin-bottom: 25px;
     margin-top: 40px;
     font-size: 23px;
     font-weight: 500; }
     @media screen and (min-width: 1180px) {
-      section h2 {
+      section .rte h2 {
         margin-bottom: 46px;
         font-size: 28px; } }
-  section .heading-text {
+  section .rte .heading-text {
     font-size: 14px;
     margin-bottom: 53px; }
     @media screen and (min-width: 768px) {
-      section .heading-text {
+      section .rte .heading-text {
         margin-bottom: 32px; } }
     @media screen and (min-width: 1180px) {
-      section .heading-text {
+      section .rte .heading-text {
         margin-bottom: 36px;
         font-size: 16px; } }
-  section .heading-list {
+  section .rte .heading-list {
     margin-bottom: 60px;
     margin-left: 20px;
     font-size: 14px; }
     @media screen and (min-width: 768px) {
-      section .heading-list {
+      section .rte .heading-list {
         margin-bottom: 48px; } }
     @media screen and (min-width: 1180px) {
-      section .heading-list {
+      section .rte .heading-list {
         margin-bottom: 58px;
         font-size: 16px; } }
-    section .heading-list li {
+    section .rte .heading-list li {
       margin-bottom: 25px; }
-      section .heading-list li:last-child {
+      section .rte .heading-list li:last-child {
         margin-bottom: 0; }
       @media screen and (min-width: 768px) {
-        section .heading-list li {
+        section .rte .heading-list li {
           padding-left: 15px; } }
-    section .heading-list li::marker {
+    section .rte .heading-list li::marker {
       font-size: 20px; }
-  section h3 {
+  section .rte h3 {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 27px; }
     @media screen and (min-width: 768px) {
-      section h3 {
+      section .rte h3 {
         margin-bottom: 35px; } }
     @media screen and (min-width: 1180px) {
-      section h3 {
+      section .rte h3 {
         margin-bottom: 46px;
         font-size: 23px; } }
-  section .subheading-list {
+  section .rte .subheading-list {
     margin-bottom: 35px;
     font-size: 14px; }
     @media screen and (min-width: 1180px) {
-      section .subheading-list {
+      section .rte .subheading-list {
         font-size: 16px; } }
-    section .subheading-list > a {
+    section .rte .subheading-list > a {
       text-decoration: none;
       color: #4A79BC; }
-      section .subheading-list > a:hover {
+      section .rte .subheading-list > a:hover {
         text-decoration: underline; }
-  section > p {
+  section .rte > p {
     font-size: 14px; }
     @media screen and (min-width: 1180px) {
-      section > p {
+      section .rte > p {
         font-size: 16px; } }
 
 .form {
@@ -621,52 +826,49 @@ section {
   margin-top: 75px; }
   @media screen and (min-width: 1180px) {
     .form {
-      padding: 0 20px;
       margin-top: 125px; } }
-  .form .gray-bgd {
+  .form .container {
     padding: 55px 20px; }
     @media screen and (min-width: 768px) {
-      .form .gray-bgd {
+      .form .container {
         padding: 63px 130px 112px 130px; } }
     @media screen and (min-width: 1180px) {
-      .form .gray-bgd {
-        max-width: 1180px;
-        padding: 70px 0 100px 0;
-        margin: 0 auto; } }
+      .form .container {
+        padding: 70px 0 100px 0; } }
     @media screen and (min-width: 1180px) {
-      .form .gray-bgd .form-vector {
+      .form .container .form-vector {
         display: flex;
         justify-content: space-between; } }
-    .form .gray-bgd .form-vector img {
+    .form .container .form-vector img {
       width: 100%;
       display: none;
       height: 430px; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-vector img {
+        .form .container .form-vector img {
           display: block;
           margin-right: 65px;
           margin-top: 45px; } }
-    .form .gray-bgd p {
+    .form .container p {
       font-size: 23px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 40px; }
       @media screen and (min-width: 768px) {
-        .form .gray-bgd p {
+        .form .container p {
           margin-bottom: 57px;
           font-size: 28px; } }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd p {
+        .form .container p {
           margin-bottom: 78px;
           font-size: 32px; } }
-    .form .gray-bgd .form-body label {
+    .form .container .form-body label {
       margin-bottom: 12px;
       font-size: 12px;
       font-weight: bold; }
       @media screen and (min-width: 768px) {
-        .form .gray-bgd .form-body label {
+        .form .container .form-body label {
           font-size: 14px; } }
-    .form .gray-bgd .form-body input {
+    .form .container .form-body input {
       font-size: 14px;
       font-weight: 500;
       height: 43px;
@@ -675,30 +877,30 @@ section {
       background-color: #F7F7F7;
       padding-left: 14px; }
       @media screen and (min-width: 768px) {
-        .form .gray-bgd .form-body input {
+        .form .container .form-body input {
           height: 55px;
           font-size: 16px; } }
-    .form .gray-bgd .form-body__name {
+    .form .container .form-body__name {
       width: 100%;
       display: inline-flex;
       flex-direction: column; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__name {
+        .form .container .form-body__name {
           margin-bottom: 5px; } }
-    .form .gray-bgd .form-body__mail {
+    .form .container .form-body__mail {
       width: 100%;
       display: inline-flex;
       flex-direction: column; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__mail {
+        .form .container .form-body__mail {
           margin-bottom: 5px; } }
-    .form .gray-bgd .form-body__mgs {
+    .form .container .form-body__mgs {
       display: inline-flex;
       flex-direction: column; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__mgs {
+        .form .container .form-body__mgs {
           margin-bottom: 5px; } }
-      .form .gray-bgd .form-body__mgs textarea {
+      .form .container .form-body__mgs textarea {
         width: 100%;
         box-sizing: border-box;
         background-color: #F7F7F7;
@@ -709,27 +911,28 @@ section {
         padding: 22px 0 0 14px;
         height: 100px; }
         @media screen and (min-width: 1180px) {
-          .form .gray-bgd .form-body__mgs textarea {
+          .form .container .form-body__mgs textarea {
             height: 142px; } }
-    .form .gray-bgd .form-body__checkbox {
+    .form .container .form-body__checkbox {
       display: flex;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      cursor: pointer; }
       @media screen and (min-width: 1180px) {
-        .form .gray-bgd .form-body__checkbox {
+        .form .container .form-body__checkbox {
           margin-bottom: 30px; } }
-      .form .gray-bgd .form-body__checkbox input {
+      .form .container .form-body__checkbox input {
         width: 20px;
         height: 20px;
         border: 1px solid #575756;
         border-radius: 5px; }
-      .form .gray-bgd .form-body__checkbox label {
+      .form .container .form-body__checkbox label {
         font-size: 14px;
         font-weight: 400;
         margin-bottom: unset;
         align-self: center;
         margin-left: 15px; }
         @media screen and (min-width: 1180px) {
-          .form .gray-bgd .form-body__checkbox label {
+          .form .container .form-body__checkbox label {
             margin-left: 5px; } }
   .form button {
     font-size: 14px;
@@ -740,32 +943,35 @@ section {
     border-radius: 5px;
     outline: none;
     border: none;
-    padding: 15px 35px; }
+    padding: 15px 35px;
+    cursor: pointer; }
     .form button:hover {
       opacity: 0.5; }
 
-.footer-top {
-  display: none;
+footer {
   background-color: #4A79BC; }
+
+.footer-top {
+  display: none; }
   @media screen and (min-width: 1180px) {
     .footer-top {
       display: block; } }
-  .footer-top .footer-box {
+  .footer-top .container {
     display: flex;
     justify-content: space-between;
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 85px 0 65px 0; }
-    .footer-top .footer-box .footer-info {
+    .footer-top .container .footer-info {
       margin-right: 168px;
       font-size: 14px;
       font-weight: 500; }
-      .footer-top .footer-box .footer-info img {
+      .footer-top .container .footer-info img {
         margin-bottom: 40px; }
-      .footer-top .footer-box .footer-info p {
+      .footer-top .container .footer-info p {
         padding-bottom: 25px;
         color: #F7F7F7; }
-        .footer-top .footer-box .footer-info p:last-child {
+        .footer-top .container .footer-info p:last-child {
           padding-bottom: 0; }
   .footer-top .footer-menu nav {
     display: flex; }
@@ -780,27 +986,24 @@ section {
       font-size: 14px;
       font-weight: 500;
       list-style: none;
-      color: #F7F7F7; }
+      color: #F7F7F7;
+      cursor: pointer; }
       .footer-top .footer-menu nav ul li:hover {
         text-decoration: underline; }
 
 .footer-legal {
   background-color: #87C5EC; }
-  .footer-legal__container {
+  .footer-legal .container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
     padding: 40px 0 10px 0; }
     @media screen and (min-width: 768px) {
-      .footer-legal__container {
+      .footer-legal .container {
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px 20px 15px 20px; } }
-    @media screen and (min-width: 1180px) {
-      .footer-legal__container {
-        width: 1180px;
-        margin: 0 auto; } }
+        padding: 20px 0 15px 0; } }
   .footer-legal__text {
     font-size: 12px;
     order: 1;
@@ -810,7 +1013,8 @@ section {
         order: inherit;
         font-weight: 500; } }
   .footer-legal__logo {
-    margin-bottom: 33px; }
+    margin-bottom: 33px;
+    cursor: pointer; }
     .footer-legal__logo img {
       height: 26px;
       width: 29px; }
@@ -855,3 +1059,9 @@ p {
 ul {
   -webkit-padding-start: 0;
           padding-inline-start: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }

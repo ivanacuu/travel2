@@ -1,13 +1,16 @@
+footer {
+  background-color: $blue;
+
+}
 .footer-top{
   display: none;
-  background-color: $blue;
   @include desktop{
     display: block;
   }
-  .footer-box{
+  .container{
     display: flex;
     justify-content: space-between;
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 85px 0 65px 0;
     .footer-info{
@@ -44,6 +47,7 @@
             font-weight: 500;
             list-style: none;
             color: $white;
+            cursor: pointer;
             &:hover{
               text-decoration: underline;
             }
@@ -54,7 +58,7 @@
 }
 .footer-legal{
   background-color: $light-blue;
-  &__container{
+  .container{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -63,11 +67,7 @@
     @include tablet{
       flex-direction: row;
       justify-content: space-between;
-      padding: 20px 20px 15px 20px;
-    }
-    @include desktop{
-      width: 1180px;
-      margin: 0 auto;
+      padding: 20px 0 15px 0;
     }
   }
   &__text{
@@ -81,6 +81,7 @@
   }
   &__logo{
     margin-bottom: 33px;
+    cursor: pointer;
     img{
       height: 26px;
       width: 29px;

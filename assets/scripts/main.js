@@ -37,3 +37,17 @@ menu.addEventListener("click", () =>{
   mobile.classList.toggle("mobile-menu-open");
   menu.classList.toggle("burger-button-open");
 })
+
+/*accordion*/
+const accordionContainer = document.querySelector(".all-places");
+
+accordionContainer.addEventListener("click", (e) => {
+  const accordions = Array.from(accordionContainer.children);
+  const clicked = e.target.closest(".accordion-places");
+  console.log(clicked);
+  if (!clicked) return;
+  accordions.forEach(function (acc) {
+    acc.classList.remove("accordion-description-open");
+  });
+  clicked.classList.add("accordion-description-open");
+});

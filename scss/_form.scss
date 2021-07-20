@@ -2,18 +2,16 @@
   background-color: $white;
   margin-top: 75px;
   @include desktop{
-    padding: 0 20px;
+    // padding: 0 20px;
     margin-top: 125px;
   }
-  .gray-bgd{
+  .container{
     padding: 55px 20px;
     @include tablet{
       padding: 63px 130px 112px 130px;
     }
     @include desktop{
-      max-width: 1180px;
       padding: 70px 0 100px 0;
-      margin: 0 auto;
     }
 
     .form-vector{
@@ -108,6 +106,7 @@
       &__checkbox{
         display: flex;
         margin-bottom: 40px;
+        cursor: pointer;
         @include desktop{
           margin-bottom: 30px;
         }
@@ -140,6 +139,7 @@
     outline: none;
     border: none;
     padding: 15px 35px;
+    cursor: pointer;
     &:hover {
       opacity: 0.5;
     }

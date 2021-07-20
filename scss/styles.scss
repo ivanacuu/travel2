@@ -2,6 +2,7 @@
 @import "hero";
 @import "slider";
 @import "explore";
+@import "accordion";
 @import "section";
 @import "form";
 @import "footer";
@@ -24,4 +25,9 @@ p{
 ul{
   padding-inline-start: 0;
 }
-
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
