@@ -608,8 +608,157 @@
     font-size: 14px;
     font-weight: 500; }
 
+.tickets {
+  background-color: #7CC9C3;
+  padding: 50px 20px 60px 20px;
+  margin: 65px 0 60px 0; }
+  @media screen and (min-width: 768px) {
+    .tickets {
+      padding: 65px 0 125px 0;
+      position: relative;
+      overflow: hidden; } }
+  @media screen and (min-width: 1180px) {
+    .tickets {
+      padding: 85px 0 110px 0;
+      margin: 115px 0 88px 0; } }
+  .tickets .people-vector {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .tickets .people-vector {
+        display: block;
+        position: absolute;
+        left: 30%;
+        bottom: 40px;
+        z-index: 1; } }
+    @media screen and (min-width: 1180px) {
+      .tickets .people-vector {
+        bottom: 120px;
+        left: 50%; } }
+  .tickets .container {
+    text-align: center;
+    position: inherit;
+    z-index: 2; }
+    .tickets .container .tickets-heading {
+      color: #F7F7F7;
+      font-size: 23px;
+      font-weight: bold;
+      margin-bottom: 45px; }
+      @media screen and (min-width: 1180px) {
+        .tickets .container .tickets-heading {
+          font-size: 32px;
+          margin-bottom: 110px; } }
+    .tickets .container .tickets-wrapper {
+      display: flex;
+      flex-direction: column; }
+      .tickets .container .tickets-wrapper .ticket-item {
+        background-color: #F7F7F7;
+        margin-bottom: 20px;
+        border-radius: 5px; }
+        @media screen and (min-width: 768px) {
+          .tickets .container .tickets-wrapper .ticket-item {
+            display: flex;
+            align-items: center;
+            width: 85%;
+            margin-bottom: 25px; }
+            .tickets .container .tickets-wrapper .ticket-item:first-child {
+              width: 95%; }
+            .tickets .container .tickets-wrapper .ticket-item:last-child {
+              margin-bottom: 0; } }
+        @media screen and (min-width: 1180px) {
+          .tickets .container .tickets-wrapper .ticket-item {
+            max-width: 682px;
+            margin-bottom: 40px; }
+            .tickets .container .tickets-wrapper .ticket-item:first-child {
+              max-width: 905px; } }
+        .tickets .container .tickets-wrapper .ticket-item .ticket-main {
+          padding: 20px; }
+          @media screen and (min-width: 768px) {
+            .tickets .container .tickets-wrapper .ticket-item .ticket-main {
+              width: 75%;
+              display: flex;
+              border-right: 7px dotted #EBEBEB;
+              align-items: center;
+              padding: 20px 0 20px 20px; } }
+          @media screen and (min-width: 1180px) {
+            .tickets .container .tickets-wrapper .ticket-item .ticket-main {
+              padding: 25px 0 25px 50px; } }
+          .tickets .container .tickets-wrapper .ticket-item .ticket-main .tickets-icon {
+            height: 41px;
+            width: 41px;
+            margin-bottom: 15px; }
+            @media screen and (min-width: 768px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-main .tickets-icon {
+                margin-bottom: 0;
+                margin-right: 30px; }
+                .tickets .container .tickets-wrapper .ticket-item .ticket-main .tickets-icon:first-child {
+                  width: unset;
+                  height: unset; } }
+            @media screen and (min-width: 1180px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-main .tickets-icon {
+                margin-right: 45px; } }
+          @media screen and (min-width: 768px) {
+            .tickets .container .tickets-wrapper .ticket-item .ticket-main .ticket-description {
+              text-align: left; } }
+          .tickets .container .tickets-wrapper .ticket-item .ticket-main .ticket-description-title {
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 20px; }
+            @media screen and (min-width: 768px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-main .ticket-description-title {
+                padding-bottom: 10px;
+                font-size: 16px; } }
+            @media screen and (min-width: 1180px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-main .ticket-description-title {
+                font-size: 18px; } }
+          .tickets .container .tickets-wrapper .ticket-item .ticket-main .ticket-description-text {
+            font-size: 14px; }
+            @media screen and (min-width: 1180px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-main .ticket-description-text {
+                font-size: 16px; } }
+        .tickets .container .tickets-wrapper .ticket-item .ticket-price {
+          border-top: 5px dotted #EBEBEB; }
+          @media screen and (min-width: 768px) {
+            .tickets .container .tickets-wrapper .ticket-item .ticket-price {
+              border-top: hidden;
+              margin: 0 auto; } }
+          .tickets .container .tickets-wrapper .ticket-item .ticket-price .ticket-reservation p {
+            font-size: 23px;
+            color: #f5c41f;
+            font-weight: bold;
+            padding: 20px 0; }
+            @media screen and (min-width: 768px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-price .ticket-reservation p {
+                padding: 0 0 10px 0; } }
+            @media screen and (min-width: 1180px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-price .ticket-reservation p {
+                font-size: 30px;
+                padding: 0 0 15px 0; } }
+          .tickets .container .tickets-wrapper .ticket-item .ticket-price .ticket-reservation button {
+            margin-bottom: 20px;
+            padding: 7px 20px;
+            background-color: #87C5EC;
+            color: white;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer; }
+            @media screen and (min-width: 768px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-price .ticket-reservation button {
+                margin-bottom: unset; } }
+            @media screen and (min-width: 1180px) {
+              .tickets .container .tickets-wrapper .ticket-item .ticket-price .ticket-reservation button {
+                padding: 10px 40px; } }
+
 .accordion {
-  position: relative; }
+  position: relative;
+  margin-bottom: 40px; }
+  @media screen and (min-width: 768px) {
+    .accordion {
+      margin-bottom: 70px; } }
+  @media screen and (min-width: 1180px) {
+    .accordion {
+      margin-bottom: 160px; } }
   .accordion .services {
     position: relative;
     background-color: #F7B74F; }

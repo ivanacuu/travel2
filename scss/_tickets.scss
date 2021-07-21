@@ -1,0 +1,162 @@
+.tickets{
+  background-color: $green;
+	padding: 50px 20px 60px 20px;
+	margin: 65px 0 60px 0;
+	@include tablet{
+		padding: 65px 0 125px 0;
+		position: relative;
+		overflow: hidden;
+	}
+	@include desktop{
+		padding: 85px 0 110px 0;
+		margin: 115px 0 88px 0;
+	}
+	.people-vector{
+		display: none;
+		@include tablet{
+			display:block;
+			position: absolute;
+			left: 30%;
+			bottom: 40px;
+			z-index: 1;
+		}
+		@include desktop{
+			bottom: 120px;
+			left: 50%;
+		}
+	}
+	.container{
+		text-align: center;
+		position: inherit;
+		z-index: 2;
+		.tickets-heading{
+			color: $white;
+			font-size: 23px;
+			font-weight: bold;
+			margin-bottom: 45px;
+			@include desktop{
+				font-size: 32px;
+				margin-bottom: 110px;
+			}
+		}
+		.tickets-wrapper{
+			display: flex;
+			flex-direction: column;
+			.ticket-item{
+				background-color: $white;
+				margin-bottom: 20px;
+				border-radius: 5px;
+				@include tablet{
+					display: flex;
+					align-items: center;
+					width: 85%;
+					margin-bottom: 25px;
+					&:first-child{
+						width: 95%;
+					}
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+				@include desktop{
+					max-width: 682px;
+					margin-bottom: 40px;
+					&:first-child{
+						max-width: 905px;
+					}
+				}
+				.ticket-main{
+					padding: 20px;
+					@include tablet{
+						width: 75%;
+						display: flex;
+						border-right: 7px dotted #EBEBEB;
+						align-items: center;
+						padding: 20px 0 20px 20px;
+					}
+					@include desktop{
+						padding: 25px 0 25px 50px;
+					}
+					.tickets-icon{
+						height: 41px;
+						width: 41px;
+						margin-bottom: 15px;
+						@include tablet{
+							margin-bottom: 0;
+							margin-right: 30px;
+							&:first-child{
+								width: unset;
+								height: unset;
+							}
+						}
+						@include desktop{
+							margin-right: 45px;
+						}
+					}
+					.ticket-description{
+						@include tablet{
+							text-align: left;
+						}
+						&-title{
+							font-size: 18px;
+							font-weight: bold;
+							padding-bottom: 20px;
+							@include tablet{
+								padding-bottom: 10px;
+								font-size: 16px;
+							}
+							@include desktop{
+								font-size: 18px;
+							}
+						}
+						&-text{
+							font-size: 14px;
+							@include desktop{
+								font-size: 16px;
+							}
+						}
+					}
+				}
+				.ticket-price{
+					border-top: 5px dotted #EBEBEB;
+					@include tablet{
+						border-top: hidden;
+						margin: 0 auto;
+					}
+					.ticket-reservation{
+						p{
+							font-size: 23px;
+							color: #f5c41f;
+							font-weight: bold;
+							padding: 20px 0;
+							@include tablet{
+								padding: 0 0 10px 0;
+							}
+							@include desktop{
+								font-size: 30px;
+								padding: 0 0 15px 0;
+							}
+						}
+						button{
+							margin-bottom: 20px;
+							padding: 7px 20px;
+							background-color: $light-blue;
+							color: white;
+							outline: none;
+							border: none;
+							border-radius: 5px;
+							font-size: 14px;
+							cursor: pointer;
+							@include tablet{
+								margin-bottom: unset
+							}
+							@include desktop{
+								padding: 10px 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

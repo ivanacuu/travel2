@@ -52,7 +52,7 @@ accordionContainer.addEventListener("click", (e) => {
   clicked.classList.add("accordion-description-open");
 });
 
-
+/*video-popup*/
 const videoPopup = document.querySelector(".video-popup");
 const videoPlayer = document.querySelector(".video");
 
@@ -65,5 +65,3 @@ const closePopup = () =>{
   videoPlayer.pause();
   return false; 
 }
-
-
