@@ -1,5 +1,12 @@
 .accordion{
   position: relative;
+  margin-bottom: 40px;
+  @include tablet{
+    margin-bottom: 70px;
+  }
+  @include desktop{
+    margin-bottom: 160px;
+  }
   .services{
     position: relative;
     background-color: $orange;
