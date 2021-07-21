@@ -468,7 +468,7 @@
   }
 }
 .video-popup{
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -506,6 +506,8 @@
       width: 20px;
       right: 20px;
       top: -10%;
+      color: $white;
+      text-decoration: none;
       @include tablet{
         right: 18%;
       }

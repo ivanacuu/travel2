@@ -21,6 +21,7 @@
     position: relative;
     margin: auto;
     display: flex;
+    z-index: -2;
     @include tablet{
       display: none;
     }
