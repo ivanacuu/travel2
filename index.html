@@ -96,7 +96,7 @@
      <p class="hero-content-text">Lsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
      <div class="hero-content-buttons">
        <a class="hero-content-buttons__white">Explore All</a>
-       <a class="hero-content-buttons__transparent">Watch Storie</a>
+       <a class="hero-content-buttons__transparent" onClick="openPopup()">Watch Storie</a>
      </div>
      <div class="hero-content-guide">
        <span>
@@ -115,9 +115,14 @@
        </div>
      </div>
    </div>
+   <div class="video-popup">
+     <div class="video-wrapper">
+      <video controls="true" class="video">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" >
+      </video>
+      <a href="#" class="video-close" onClick="closePopup()">X</a>
+     </div>
  </div>
- <div class="video-popup">
-  <video src></video>
  </div>
 <div class="destinations">
   <div class="destinations-info">

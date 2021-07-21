@@ -51,3 +51,19 @@ accordionContainer.addEventListener("click", (e) => {
   });
   clicked.classList.add("accordion-description-open");
 });
+
+
+const videoPopup = document.querySelector(".video-popup");
+const videoPlayer = document.querySelector(".video");
+
+const openPopup = () =>{
+  videoPopup.classList.add("active");
+}
+
+const closePopup = () =>{
+  videoPopup.classList.remove("active");
+  videoPlayer.pause();
+  return false; 
+}
+
+
