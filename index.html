@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="assets/css/variables.css"/>
   <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> -->
 </head>
 <body>
  <div class="hero-bgd">
@@ -124,7 +126,7 @@
      </div>
  </div>
  </div>
-<div class="destinations">
+ <div class="destinations">
   <div class="destinations-info">
     <span>
       <img src="assets/images/Explore-logo.png" alt="explore"/>
@@ -133,23 +135,23 @@
     <p class="destinations-info__description">Lorem ipsum dolor sit amet consectetur</p>
     <a class="destinations-info__button">Explore All</a>
   </div>
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="assets/images/Novi-Sad.png" alt="">
-      <div class="text">Novi Sad, Serbia</div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+       <div class="swiper-slide">
+         <img src="assets/images/Novi-Sad.png" alt="">
+       </div>
+       <div class="swiper-slide"> 
+         <img src="assets/images/Amsterdam.png" alt="">
+       </div>
+       <div class="swiper-slide">
+         <img src="assets/images/Bahamas.png" alt="">
+       </div>
     </div>
-    <div class="mySlides fade">
-      <img src="assets/images/Amsterdam.png" alt="">
-      <div class="text">Amsterdam, Netherlands</div>
-    </div>
-    <div class="mySlides fade ">
-      <img src="assets/images/Bahamas.png" alt="">
-      <div class="text">The Bahamas</div>
-    </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
-</div>
+  </div>
+ </div>
 <div class="tickets">
   <img src="assets/images/people-vector.png" alt="people" class="people-vector">
   <div class="container">
@@ -437,6 +439,7 @@
      </div>
   </div>
 </footer>
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
  <script src="assets/scripts/main.js"></script>
 </body>
 </html>

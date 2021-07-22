@@ -1,28 +1,28 @@
 .destinations{
-  @include tablet{
-    display: flex;
-  }
-  @include desktop{
-    width: 1180px;
-    margin: 0 auto;
-
-  }
   &-info{
-    padding: 0 20px;
+    text-align: left;
+    margin-bottom: 45px;
     position: relative;
-    text-align: center;
-    margin-top: 98px;
     @include tablet{
-      //flex: 0 1 45%;
+      flex: 0 1 50%;
+      text-align: left;
+      padding: 0;
     }
     @include desktop{
       padding: 0;
+      flex: unset;
+      width: 1180px;
+      margin: 0 auto;
     }
     >span{
       position: absolute;
       top: -35px;
       left: 0;
+      text-align: center;
       right: 0;
+      @include tablet{
+        text-align: left;
+      }
       >img{
         width: 250px;
         height: 65px;
@@ -34,21 +34,33 @@
       font-size: 23px;
       font-weight: bold;
       margin-bottom: 25px;
+      letter-spacing: 0.5px;
       @include desktop{
         font-size: 28px;
       }
     }
     &__description{
       font-size: 14px;
-      margin-bottom: 42px;
+      @include tablet{
+        margin-bottom: 40px;
+      }
       @include desktop{
         font-size: 16px;
+        position: relative;
       }
     }
     &__button{
+      cursor: pointer;
       display: none;
       font-size: 14px;
       font-weight: 500;
+      padding: 15px 30px;
+      background-color: $orange-button;
+      color: $white;
+      border-radius: 5px;
+      @include tablet{
+        display: inline-block;
+      }
     }
   }
 }
