@@ -45,7 +45,7 @@ const closePopup = () =>{
 
 /*sleder-swiper*/
 const swiper = new Swiper('.swiper-container', {
-  
+  loop: true,
   spaceBetween: 10,
   width: 275,
   navigation: {
