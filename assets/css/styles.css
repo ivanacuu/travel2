@@ -49,7 +49,7 @@
           padding: 0; } }
       @media screen and (min-width: 1180px) {
         .hero-bgd .header .container {
-          padding: 5px 20px 5px 20px; } }
+          padding: 0 30px; } }
     @media screen and (min-width: 1180px) {
       .hero-bgd .header .logo {
         display: flex;
@@ -161,9 +161,10 @@
           text-decoration: none;
           color: #2E2D2C;
           text-align: center;
+          padding: 25px 0;
           display: block; }
         .hero-bgd .header .nav-menu li a:hover {
-          border-bottom: 1px solid #F7B74F;
+          border-bottom: 1px solid #F15928;
           background-color: #f3f5f9; }
       @media screen and (min-width: 1180px) {
         .hero-bgd .header .nav-menu {
