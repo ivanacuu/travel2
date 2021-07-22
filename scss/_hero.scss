@@ -22,7 +22,7 @@
         padding: 0;
       }
       @include desktop{
-        padding: 5px 20px 5px 20px;
+        padding: 0 30px;
       }
     }
     .logo{
@@ -175,11 +175,11 @@
           text-decoration: none;
           color: $black;
           text-align: center;
-          // height: 74px;
+          padding: 25px 0;
           display: block;
         }
         a:hover{
-          border-bottom: 1px solid $orange;
+          border-bottom: 1px solid $orange-button;
           background-color: #f3f5f9;;
         }
       }
