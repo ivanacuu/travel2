@@ -6,6 +6,14 @@ toggler.addEventListener("click", () => {
   header.classList.toggle("search-open");
 })
 
+/*desktop-search*/
+const desktopToggler = document.querySelector(".desktop-search-toggler");
+const desktopHeader = document.querySelector(".header");
+
+desktopToggler.addEventListener("click", () =>{
+  desktopHeader.classList.toggle("desktop-search-open");
+})
+
 /*menu*/
 const menu = document.querySelector(".burger-button");
 const mobile = document.querySelector(".mobile-menu");
