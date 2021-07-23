@@ -77,8 +77,8 @@
       }
     }
     .form-control {
-      // width: 100%;
-      width: calc(100% - 50px);
+      width: 100%;
+      // width: calc(100% - 50px);
       height: 100%;
       padding-left: 25px;
       padding-right: 25px;
@@ -257,6 +257,34 @@
         height: 16px;
       }
     }
+    /*active desktop header*/
+    &.desktop-search-open{
+      .header-action-links-desktop{
+        .desktop-right-wrapper{
+          .desktop-right-block{
+            height: 30px;
+            .desktop-search{
+              display: block;
+            }
+            .desktop-search-toggler{
+              .desktop-open{
+                opacity: 0;
+              }
+              .desktop-close{
+                opacity: 1;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .logo{
+        .nav-menu{
+          display: none;
+        }
+      }
+    }
+    /*default state of desktop header*/
     .header-action-links-desktop{
       align-items: center;
       display: none;
@@ -281,6 +309,40 @@
       }
       @include desktop{
         display: flex;
+      }
+      .desktop-search{
+        display: none;
+        position: relative;
+        .desktop-form-control{
+          width: 750px;
+          height: 100%;
+          padding: 8px 25px;
+          background-color: #f3f5f9;;
+          border-radius: 5px;
+          border-color: transparent;
+          outline: none;
+        }
+        .desktop-icon{
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          font-size: 13px;
+        }
+      }
+      .desktop-search-toggler{
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        .desktop-close{
+          display: none;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 78%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
   }
